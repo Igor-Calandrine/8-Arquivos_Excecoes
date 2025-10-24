@@ -2,7 +2,7 @@
 
 print("1 - Lendo o arquivo")
 
-arquivo = "8-Arquivos_Exceções\Exercicios\\001.txt"
+arquivo = "8-Arquivos_Excecoes\Exercicios\\001.txt"
 
 with open(arquivo, encoding="UTF-8") as objeto_arquivo_1:
     conteudo = objeto_arquivo_1.read()
@@ -10,7 +10,7 @@ with open(arquivo, encoding="UTF-8") as objeto_arquivo_1:
 
 print("\n2 - Percorrendo o objeto")
 
-arquivo_2 = "8-Arquivos_Exceções\Exercicios\\001.txt"
+arquivo_2 = "8-Arquivos_Excecoes\Exercicios\\001.txt"
 
 with open(arquivo_2, encoding="UTF-8") as objeto_arquivo_2:
     for line_2 in objeto_arquivo_2:
@@ -18,7 +18,7 @@ with open(arquivo_2, encoding="UTF-8") as objeto_arquivo_2:
 
 print("\n3 - Lendo fora do bloco")
 
-arquivo_3 = "8-Arquivos_Exceções\Exercicios\\001.txt"
+arquivo_3 = "8-Arquivos_Excecoes\Exercicios\\001.txt"
 
 with open(arquivo_3, encoding="UTF-8") as objeto_arquivo_3:
     read_lines = objeto_arquivo_3.readlines()

@@ -4,7 +4,7 @@
 'I really like cats.'
 Leia cada linha do arquivo learning_python.txt que você acabou de criar e substitua a palavra Python pelo nome de outra linguagem, por exemplo, C. Mostre cada linha modificada na tela."""
 
-arquivo = "8-Arquivos_Exceções\Exercicios\\001.txt"
+arquivo = "8-Arquivos_Excecoes\Exercicios\\001.txt"
 
 with open(arquivo, encoding="UTF-8") as objeto_arquivo:
     conteudo = objeto_arquivo.readlines()
