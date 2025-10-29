@@ -27,7 +27,7 @@ except:
 """
 Usando exceções para evitar falhas
     Tratar erros de forma correta é iportante, em especial quando o programa tiver outras atividades para fazer depois que o erro ocorrer. Isso acontece com frequência em programas que pedem dados de entrada as usuários. Se o programa responder a entradas inválidas de modo apropriado, ele poderá pedir mais entradas válidas em vez de causar uma falha.
-    Usuários que não sejam técnicos ficarão confusos com eles, e em um ambiente malicioso, anvasores aprenderão mais do que você quer que eles saibam a partir de um #traceback. Por exemplo, eles saberão o nome de seu arquivo de programa e verão uma parte de seu código que não está funcionando de forma propriada. Isso pode ser o suficiente para realizar um tipo de ataque que podem usar contra o seu código."""
+    Usuários que não sejam técnicos ficarão confusos com eles, e em um ambiente malicioso, invasores aprenderão mais do que você quer que eles saibam a partir de um #traceback. Por exemplo, eles saberão o nome de seu arquivo de programa e verão uma parte de seu código que não está funcionando de forma propriada. Isso pode ser o suficiente para realizar um tipo de ataque que podem usar contra o seu código."""
 
 """
 Bloco else
@@ -57,6 +57,7 @@ while True:
     Vamos tentar ler um arquivo que não existe."""
 
 print("\nExemplo 4")
+
 arquivo_4 = "exemplo_4.txt"
 
 # with open(arquivo_4) as objeto:
@@ -66,6 +67,7 @@ arquivo_4 = "exemplo_4.txt"
 """A última linhas do traceback informa um FileNotFoundError, essa é a exceção criada por Python quando não encontra o arquivo que está tentando abrir. A função open() gera o erro, para tratá-lo o bloco try tem início imediatamente antes da linha que contém essa função."""
 
 print("\nExemplo 5")
+
 arquivo_5 = "exemplo_4.txt"
 
 try:
@@ -73,16 +75,16 @@ try:
         conteudo = objeto.readline()
         print(conteudo)
 except:
-    msg = f"Arquivo {arquivo_5} não existe"
-    print(msg)
+    print(f"Arquivo {arquivo_5} não existe")
 
 """
 Analisando textos
     Podemos analisar arquivos-texto que contenham blocos inteiros. Muitas obras clássicas de literatura estão disponíveis como arquivos-texto simples, pois estão em domínio público.
     http://gutenberg.org/
-    Vamos obter um texto e tantar contar o número de palavras do texto. usaremos o método de string split(), que cria uma lista de palavras a partir de uma string."""
+    Vamos obter um texto e tentar contar o número de palavras do texto. Usaremos o método de string split(), que cria uma lista de palavras a partir de uma string."""
 
 print("\nExemplo 6")
+
 titulo = "Alice no país das Maravilha"
 print(titulo.split())
 
@@ -101,7 +103,7 @@ else:
 
 """
 Trabalhando com vários arquivos
-    Vamos acrescentar outros livros para analisar. Porém, antes disso, vamos passar a parte principal desse programa para uma função chamada contar_palavras."""
+    Vamos acrescentar outros livros para analisar. Porém, antes disso, vamos passar a parte principal desse programa para uma função chamada contar_palavras. Após isso iremos chamar essa função colocando como parâmetro o arquivo desejado, assim você poderá abrir quantos arquivos quiser."""
 
 print("\nExemplo 8")
 
@@ -125,6 +127,7 @@ contar_palavras(arquivo_8)
     Agora iremos acrescentar mais arquivos e um que não existe no diretório para ver como será tratado. Utilizaremos um laço #for para analizar um arquivo de cada vez dentro da lista."""
 
 print("\nExemplo 9")
+
 arquivos = ["8-Arquivos_Excecoes/4a-alice.txt", "8-Arquivos_Excecoes/4a-moby.txt", "8-Arquivos_Excecoes/inexistente.txt"]
 
 for arquivo in arquivos:
